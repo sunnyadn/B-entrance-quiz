@@ -1,6 +1,6 @@
 package com.thoughtworks.capability.gtb.entrancequiz.model;
 
-public class Member {
+public class Member implements Comparable<Member> {
     private int id;
     private String name;
 
@@ -23,5 +23,10 @@ public class Member {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public int compareTo(Member o) {
+        return this.id - o.id;
     }
 }
