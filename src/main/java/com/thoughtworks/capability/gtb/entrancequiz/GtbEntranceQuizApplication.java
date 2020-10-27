@@ -14,7 +14,7 @@ public class GtbEntranceQuizApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/members").allowedOrigins("http://localhost:1234");
+				registry.addMapping("/**").allowedOrigins("http://localhost:1234");
 			}
 		};
 	}
