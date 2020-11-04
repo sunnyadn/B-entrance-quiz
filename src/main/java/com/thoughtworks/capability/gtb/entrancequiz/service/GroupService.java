@@ -12,6 +12,7 @@ import java.util.List;
 @Service
 public class GroupService {
 
+    //TODO GTB-知识点: - GroupService.java:15 现在可以不用在这里写 @Autowired 了
     @Autowired
     public GroupService(MemberService memberService) {
         this.memberService = memberService;
@@ -35,6 +36,7 @@ public class GroupService {
         int memberCount = members.size() / GROUP_NUMBER;
         int biggerGroupNumber = members.size() % GROUP_NUMBER;
 
+        //TODO GTB-工程实践: * 尝试再简化以下下面的分配算法
         for (int i = 0; i < GROUP_NUMBER; i++) {
             List<Member> group = new ArrayList<>();
             for (int j = 0; j < memberCount; j++) {
@@ -45,6 +47,7 @@ public class GroupService {
                 group.add(members.remove(0));
             }
 
+            //TODO GTB-完成度: - GroupService.java:49 group 里的 members 不需要排序
             Collections.sort(group);
 
             groups.add(new Group(group));

@@ -9,6 +9,7 @@ import java.util.List;
 @Service
 public class MemberService {
     private int currentIndex = 1;
+    //TODO GTB-工程实践: - MemberService.java:12 可以把List<Member> members封装成 MemberRepository。Group 那边同理。
     private final List<Member> members = new ArrayList<>();
 
 

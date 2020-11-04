@@ -19,6 +19,7 @@ public class GroupResource {
         this.groupService = groupService;
     }
 
+    //TODO GTB-工程实践: - GroupResource.java:22 字段放前面
     GroupService groupService;
 
     @GetMapping
